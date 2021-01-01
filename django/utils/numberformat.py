@@ -54,7 +54,7 @@ def format(number, decimal_sep, decimal_pos=None, grouping=0, thousand_sep='',
             str_number = '{:f}'.format(number)
     else:
         str_number = str(number)
-    if str_number[0] == '-':
+    if len(str_number) > 0 and str_number[0] == '-':
         sign = '-'
         str_number = str_number[1:]
     # decimal part
